@@ -21,10 +21,10 @@ async def main():
     )
 
     # ============================================
-    # 2. LLM CONFIGURATION (Ollama)
+    # 2. LLM CONFIGURATION (Ollama - Kimi K2.5)
     # ============================================
     llm = ChatOllama(
-        model="qwen3.5:cloud",
+        model="kimi-k2.5:cloud",
     )
 
     # ============================================
@@ -92,7 +92,7 @@ async def main():
 async def task_github_stars():
     """Example 1: Get GitHub repository stats"""
     browser = Browser(headless=False)
-    llm = ChatOllama(model="qwen3.5:cloud")
+    llm = ChatOllama(model="kimi-k2.5:cloud")
 
     agent = Agent(
         task="Go to github.com, search for 'browser-use', and tell me the number of stars, forks, and watchers",
@@ -106,7 +106,7 @@ async def task_github_stars():
 async def task_web_search():
     """Example 2: Web search and extract information"""
     browser = Browser(headless=False)
-    llm = ChatOllama(model="qwen3.5:cloud")
+    llm = ChatOllama(model="kimi-k2.5:cloud")
 
     agent = Agent(
         task="Search for 'latest AI news today' on Google and summarize the top 5 results",
@@ -120,7 +120,7 @@ async def task_web_search():
 async def task_form_fill():
     """Example 3: Fill out a form"""
     browser = Browser(headless=False)
-    llm = ChatOllama(model="qwen3.5:cloud")
+    llm = ChatOllama(model="kimi-k2.5:cloud")
 
     agent = Agent(
         task="Go to https://httpbin.org/forms/post and fill out the form with sample data, then submit it",
@@ -134,7 +134,7 @@ async def task_form_fill():
 async def task_ecommerce():
     """Example 4: E-commerce product search"""
     browser = Browser(headless=False)
-    llm = ChatOllama(model="qwen3.5:cloud")
+    llm = ChatOllama(model="kimi-k2.5:cloud")
 
     agent = Agent(
         task="Search for 'mechanical keyboard' on Amazon and find the top 3 products with their prices and ratings",
@@ -148,7 +148,7 @@ async def task_ecommerce():
 async def task_data_extraction():
     """Example 5: Extract data from a webpage"""
     browser = Browser(headless=False)
-    llm = ChatOllama(model="qwen3.5:cloud")
+    llm = ChatOllama(model="kimi-k2.5:cloud")
     tools = Tools()
 
     @tools.action(description="Save extracted data")

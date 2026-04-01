@@ -1,6 +1,6 @@
 # Browser-Use dengan Ollama (qwen3.5:cloud)
 
-🤖 AI Browser Automation menggunakan Browser-Use + Ollama
+🤖 AI Browser Automation menggunakan Browser-Use + Ollama (Kimi K2.5)
 
 ## ✅ Status
 
@@ -99,11 +99,11 @@ mcp__browseuse_local__github_repo_stats("owner/repo")
 
 | Model | Kegunaan |
 |-------|----------|
-| `qwen3.5:cloud` | **Recommended** - General tasks |
+| `kimi-k2.5:cloud` | **RECOMMENDED** - Best for browser automation |
+| `deepseek-v3.2:cloud` | Alternative for general tasks |
+| `qwen3.5:cloud` | General purpose |
 | `gemma3:27b-cloud` | Fast & lightweight |
-| `deepseek-v3.2:cloud` | General purpose |
 | `qwen3-coder:480b-cloud` | Coding tasks |
-| `qwen3-vl:235b-instruct-cloud` | Vision tasks |
 
 ## 📦 Dependencies
 

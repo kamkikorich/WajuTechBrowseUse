@@ -8,7 +8,7 @@ cls
 echo.
 echo  ================================================================
 echo            BROWSEUSE - AI Browser Automation
-echo             Powered by Ollama (qwen3.5:cloud)
+echo             Powered by Kimi K2.5 (Ollama)
 echo  ================================================================
 echo.
 echo  [1] Web Search         - Search DuckDuckGo
@@ -49,11 +49,22 @@ echo  ================================================================
 echo                     WEB SEARCH
 echo  ================================================================
 echo.
+echo  [1] Quick Search (Fast, reliable)
+echo  [2] Deep Research (Visit pages, may have errors)
+echo.
+set /p searchmode="Choose mode (1 or 2): "
+
 set /p query="Enter search query: "
-echo.
-echo Searching DuckDuckGo for: %query%
-echo.
-python "%~dp0search_engine.py" "%query%" --quick
+
+if "%searchmode%"=="1" (
+    echo.
+    echo Searching (Quick mode)...
+    python "%~dp0robust_search.py" "%query%"
+) else (
+    echo.
+    echo Searching (Deep mode)...
+    python "%~dp0search_engine.py" "%query%" --research 3
+)
 echo.
 pause
 goto MENU
@@ -193,14 +204,14 @@ echo.
 echo  Current Settings:
 echo  ----------------------------------------------------------------
 echo  Location: %~dp0
-echo  Default Model: qwen3.5:cloud
+echo  Default Model: kimi-k2.5:cloud (Recommended)
 echo  Search Engine: DuckDuckGo (No CAPTCHA)
 echo.
 echo  Available Models:
-echo    1. qwen3.5:cloud        (Recommended)
-echo    2. gemma3:27b-cloud     (Fast)
-echo    3. deepseek-v3.2:cloud  (General)
-echo    4. qwen3-coder:480b-cloud (Coding)
+echo    1. kimi-k2.5:cloud      (Recommended - Best for automation)
+echo    2. deepseek-v3.2:cloud  (Alternative)
+echo    3. qwen3.5:cloud        (General purpose)
+echo    4. gemma3:27b-cloud     (Fast)
 echo.
 echo  [1] Check Ollama Status
 echo  [2] List Available Models

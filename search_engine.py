@@ -16,11 +16,16 @@ if sys.platform == 'win32':
 SEARCH_ENGINE = "https://duckduckgo.com"
 
 
-async def search(query: str, model: str = "qwen3.5:cloud"):
+# Kimi K2.5 - Best for browser automation tasks
+DEFAULT_MODEL = "kimi-k2.5:cloud"
+
+
+async def search(query: str, model: str = None):
     """
     Search the web using AI browser automation.
     Uses DuckDuckGo to avoid CAPTCHA issues.
     """
+    model = model or DEFAULT_MODEL
     browser = Browser(
         headless=False,
         disable_security=True,
@@ -70,7 +75,7 @@ async def quick_search(query: str):
     Quick search - extract just the key info
     """
     browser = Browser(headless=False, disable_security=True)
-    llm = ChatOllama(model="qwen3.5:cloud")
+    llm = ChatOllama(model=DEFAULT_MODEL)
 
     # Direct URL to DuckDuckGo search
     search_url = f"{SEARCH_ENGINE}/?q={query.replace(' ', '+')}"
@@ -92,7 +97,7 @@ async def research(query: str, depth: int = 3):
     Deep research - visit multiple pages and summarize
     """
     browser = Browser(headless=False, disable_security=True)
-    llm = ChatOllama(model="qwen3.5:cloud")
+    llm = ChatOllama(model=DEFAULT_MODEL)
 
     task = f"""
     Research the topic: '{query}'
@@ -130,7 +135,7 @@ async def news_search(query: str):
     Search for news articles
     """
     browser = Browser(headless=False, disable_security=True)
-    llm = ChatOllama(model="qwen3.5:cloud")
+    llm = ChatOllama(model=DEFAULT_MODEL)
 
     # DuckDuckGo news search
     search_url = f"{SEARCH_ENGINE}/?q={query.replace(' ', '+')}&iar=news"
@@ -157,7 +162,7 @@ async def image_search(query: str):
     Search for images
     """
     browser = Browser(headless=False, disable_security=True)
-    llm = ChatOllama(model="qwen3.5:cloud")
+    llm = ChatOllama(model=DEFAULT_MODEL)
 
     search_url = f"{SEARCH_ENGINE}/?q={query.replace(' ', '+')}&iax=images&ia=images"
 

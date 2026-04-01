@@ -1,0 +1,62 @@
+# Browser-Use GitHub Repository Stats
+Extracted using BrowserOS Automation
+
+## Repository Information
+
+**Name:** browser-use/browser-use  
+**URL:** https://github.com/browser-use/browser-use  
+**Description:** 🌐 Make websites accessible for AI agents. Automate tasks online with ease.
+
+## Statistics
+
+| Metric | Value |
+|--------|-------|
+| ⭐ Stars | 85,437 (85.4k) |
+| 🔨 Forks | 9.9k |
+| 🐛 Issues | 40 |
+| 🔀 Pull Requests | 182 |
+| 💬 Discussions | Active |
+| 📊 Commits | 8,991 |
+| 👥 Contributors | 308 |
+| 📦 Used by | 2.4k |
+| 🏷️ Tags | 131 |
+| 🌿 Branches | 507 |
+
+## Latest Commit
+
+**Author:** sauravpanda  
+**Message:** fix: close httpx client pool on session stop to prevent OOM on Lambda  
+**Date:** Apr 1, 2026  
+**Commit:** e026a51
+
+## Top Files
+
+| File | Last Update |
+|------|-------------|
+| browser_use/ | Apr 1, 2026 |
+| tests/ | Mar 27, 2026 |
+| static/ | Mar 25, 2026 |
+| pyproject.toml | Mar 25, 2026 |
+| README.md | Mar 23, 2026 |
+
+## Languages
+
+- Python: 97.9%
+- Shell: 1.4%
+- Other: 0.7%
+
+## Quick Links
+
+- [Documentation](https://docs.browser-use.com)
+- [Cloud Platform](https://cloud.browser-use.com)
+- [Discord Community](https://link.browser-use.com/discord)
+- [Blog](https://browser-use.com/posts)
+
+## Extraction Info
+
+**Extracted:** Wed Apr 01 2026  
+**Method:** BrowserOS Automation  
+**Page:** GitHub Repository
+
+---
+*This file was automatically generated using BrowserOS browser automation*

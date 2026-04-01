@@ -39,7 +39,8 @@ mcp = FastMCP(
 
 # Global browser instance
 _browser: Optional[Browser] = None
-_current_model: str = "qwen3.5:cloud"
+# Kimi K2.5 - Best for browser automation
+_current_model: str = "kimi-k2.5:cloud"
 
 
 def get_browser(headless: bool = False) -> Browser:
@@ -232,12 +233,11 @@ def list_available_models() -> str:
     List available Ollama models for browser automation.
     """
     models = [
-        "qwen3.5:cloud - Recommended for general tasks",
-        "qwen3-coder:480b-cloud - Best for coding tasks",
-        "qwen3-vl:235b-instruct-cloud - Best for vision tasks",
+        "kimi-k2.5:cloud - RECOMMENDED for browser automation",
+        "deepseek-v3.2:cloud - Alternative for general tasks",
+        "qwen3.5:cloud - General purpose",
+        "qwen3-coder:480b-cloud - Coding tasks",
         "gemma3:27b-cloud - Fast and lightweight",
-        "deepseek-v3.2:cloud - General purpose",
-        "devstral-2:123b-cloud - Development tasks",
     ]
     return "Available models:\n" + "\n".join(f"- {m}" for m in models)
 

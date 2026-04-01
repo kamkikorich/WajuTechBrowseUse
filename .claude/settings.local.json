@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__context7__resolve-library-id",
+      "WebSearch",
+      "mcp__context7__query-docs",
+      "Bash(pip show:*)",
+      "Bash(ollama list:*)",
+      "Bash(python agent.py)",
+      "Bash(./browseuse.bat)",
+      "Bash(python demo_capabilities.py)",
+      "Bash(python test_kimi.py)",
+      "Bash(ls:*)"
+    ]
+  }
+}
