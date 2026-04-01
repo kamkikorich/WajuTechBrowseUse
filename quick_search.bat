@@ -1,12 +1,12 @@
 @echo off
 chcp 65001 >nul
 REM Quick Search - BrowseUse
-REM Usage: Double-click and enter query, or drag this file to desktop
+REM Usage: Double-click and enter query
 
-set /p query="🔍 Enter search query: "
+set /p query="Enter search query: "
 if "%query%"=="" (
     echo No query entered!
-    timeout /t 2 >nul
+    ping -n 3 127.0.0.1 >nul
     exit
 )
 
