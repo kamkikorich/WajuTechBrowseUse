@@ -1,0 +1,21 @@
+# Browser-Use with Ollama Dependencies
+# Generated for D:\BrowseUse project
+
+# Core
+browser-use>=0.12.5
+python-dotenv>=1.0.0
+
+# Already included as dependencies by browser-use:
+# - aiohttp
+# - anthropic
+# - google-genai
+# - groq
+# - openai
+# - ollama
+# - pillow
+# - pydantic
+# - rich
+
+# Optional: For local testing
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
