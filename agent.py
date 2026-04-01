@@ -1,6 +1,11 @@
 from browser_use import Agent, ChatOllama, Browser, Tools
 import asyncio
+import sys
 from dotenv import load_dotenv
+
+# Fix Windows console encoding
+if sys.platform == 'win32':
+    sys.stdout.reconfigure(encoding='utf-8')
 
 load_dotenv()
 
@@ -72,8 +77,12 @@ async def main():
     print("\n" + "=" * 50)
     print("TASK COMPLETED")
     print("=" * 50)
-    # Encode to avoid Windows console encoding errors
-    print(f"Result: {str(result).encode('utf-8', errors='ignore').decode()}")
+    # Safe print - remove emojis for Windows compatibility
+    result_str = str(result)
+    if sys.platform == 'win32':
+        # Strip emojis and special Unicode chars
+        result_str = ''.join(c for c in result_str if c.isascii() or c in 'éèêëàâäùûüôöîïç')
+    print(f"Result: {result_str}")
 
 
 # ================================================
